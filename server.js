@@ -23,7 +23,7 @@ app.get("/scan", (req, res) => {
     NMAP REAL
   */
 
-  const command = `nmap -Pn -sV --top-ports 20 ${ip}`;
+  const command = `nmap -Pn -sT -sV --top-ports 20 ${ip}`;
 
   exec(command, (error, stdout, stderr) => {
 
